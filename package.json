@@ -1,0 +1,46 @@
+{
+  "name": "@grammyjs/storage-supabase",
+  "version": "0.1.0",
+  "description": "Supabase database storage",
+  "main": "dist/mod.js",
+  "types": "dist/mod.d.ts",
+  "files": [
+    "README.md",
+    "dist",
+    "package.json"
+  ],
+  "scripts": {
+    "start": "node dist/mod.js",
+    "dev": "nodemon",
+    "debug": "node --inspect=0.0.0.0:9229 --nolazy ./dist/mod.js",
+    "prebuild": "rimraf dist",
+    "build": "deno2node tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grammyjs/storage-supabase.git"
+  },
+  "author": "Waptik <me@waptik.xyz>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/grammyjs/storage-supabase/issues"
+  },
+  "homepage": "https://github.com/grammyjs/storage-supabase#readme",
+  "devDependencies": {
+    "@supabase/supabase-js": "^1.22.5",
+    "deno2node": "^0.8.0",
+    "rimraf": "^3.0.2"
+  },
+  "peerDependencies": {
+    "@supabase/supabase-js": "^1.22.5"
+  },
+  "keywords": [
+    "grammy",
+    "grammyjs",
+    "bot",
+    "telegram",
+    "supabase",
+    "session",
+    "grammy session"
+  ]
+}
