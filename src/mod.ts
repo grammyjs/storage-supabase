@@ -5,7 +5,7 @@ interface Session {
   session: string;
 }
 
-export function SupabaseAdapter<T>({ supabase, table }: { supabase: SupabaseClient; table: string }) {
+export function supabaseAdapter<T>({ supabase, table }: { supabase: SupabaseClient; table: string }) {
   return {
     read: async (id: string) => {
       const { data, error } = await supabase.from<Session>(table).select('session').eq('id', id).single();

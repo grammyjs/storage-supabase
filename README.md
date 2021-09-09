@@ -23,7 +23,7 @@ Here is a simple example on how it's done:
 
 ```ts
 import { Bot, Context, session, SessionFlavor } from 'grammy';
-import { SupabaseAdapter } from '@waptik/grammy-supabase-adapter';
+import { supabaseAdapter } from '@grammyjs/storage-supabase';
 import { createClient } from '@supabase/supabase-js';
 
 interface SessionData {
@@ -38,7 +38,7 @@ const KEY = 'some.fake.key';
 const supabase = createClient(URL, KEY);
 
 //create storage
-const storage = SupabaseAdapter({
+const storage = supabaseAdapter({
   supabase,
   table: 'session', // the defined table name you want to use to store your session
 });
