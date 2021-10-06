@@ -21,7 +21,7 @@ To get started, you first need to
 
 ## How to use
 
-You can check [examples](https://github.com/Satont/grammy-redis-storage/tree/main/examples) folder for full blown usage, or see a simple use case below:
+You can check [examples](https://github.com/grammyjs/storage-supabase/tree/main/examples) folder for full blown usage, or see a simple use case below:
 
 ```ts
 import { Bot, Context, session, SessionFlavor } from 'grammy';
