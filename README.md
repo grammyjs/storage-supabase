@@ -14,12 +14,14 @@ To get started, you first need to
 
 - Have both `@supabase/supabase-js` and `grammy` installed
 - Have a defined table for sessions in supabase will the following informations:
-  - `id` as a primary key of string, cannot be null
-  - `session` as string, cannot be null, either
+  - `id` as a primary key of type `varchar`, cannot be null
+  - `session` as `text`. Make it nullable.
+
+  You could also add `created_at` and `updated_at` to keep track of changes.
 
 ## How to use
 
-Here is a simple example on how it's done:
+You can check [examples](https://github.com/Satont/grammy-redis-storage/tree/main/examples) folder for full blown usage, or see a simple use case below:
 
 ```ts
 import { Bot, Context, session, SessionFlavor } from 'grammy';
@@ -52,8 +54,11 @@ bot.use(
   }),
 );
 
-// Register your usual middleware, and start the bot
-bot.command('stats', (ctx) => ctx.reply(`Already got ${ctx.session.counter} photos!`));
+// Display total stats of images uploaded so far
+bot.command('stats', (ctx) => ctx.reply
+(`Already got ${ctx.session.counter} images!`));
+
+// Collect statistics of photos uploaded
 bot.on(':photo', (ctx) => ctx.session.counter++);
 
 bot.start();
