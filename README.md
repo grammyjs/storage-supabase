@@ -1,3 +1,7 @@
+# Archived!!!
+
+All storages moved to our new monorepository, contained all adapters inside of it. Check it out: https://github.com/grammyjs/storages
+
 # Supabase database storage adapter for grammY
 
 Database storage adapter that can be used to [store your session data](https://grammy.dev/plugins/session.html) in [Supabase database](https://supabase.io/docs/guides/database) when using sessions.
